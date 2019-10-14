@@ -10,4 +10,4 @@
 ## Menu
 
 * [Hello World](hello.md)
-* [reveal.js](../quick_slides_with_revealjs/README.md)
+* [reveal.js](slides_with_reveal.md)
