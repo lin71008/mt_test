@@ -1,0 +1,10 @@
+# Python
+__pycache__/
+
+# C & C++
+*.class
+*.o
+
+# dev.
+test/
+

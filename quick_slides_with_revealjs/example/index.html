@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<!-- User setting -->
+		<title>Slides Example</title>
+		<!-- reveal.js -->
+		<link rel="stylesheet" href="reveal.js/css/reset.css">	
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+		<script src="reveal.js/js/reveal.js"></script>
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<!-- Title -->
+				<section>
+					<h1>Slides Example</h1>
+					<h6>date: 2019/10/14</h6>
+					<h6>author: Nick Lin</h6>
+				</section>
+				<!-- Introuction -->
+				<section>
+					<section>
+						<h2>Introduction</h2>
+					</section>
+					<section>
+						<del>Same as title</del>
+					</section>
+				</section>
+				<!-- Setp By Step -->
+				<section>
+					<section>
+						<h2>Guide</h2>
+					</section>
+					<section>
+						<h3>Step 1</h3>
+						<p>Create an empty file named index.html.</p>
+					</section>
+					<section>
+						<h3>Step 2: init.</h3>
+						<pre><code class="html">&lt!DOCTYPE html&gt
+&lthtml lang="en"&gt
+    &lthead&gt
+        &lttitle&gtSlides Example&lt/title&gt
+    &lt/head&gt
+    &ltbody&gt
+        &lt!-- Something --&gt
+    &lt/body&gt
+&lt/html&gt
+</code></pre>
+					</section>
+					<section>
+						<h3>Step 3</h3>
+						<p>Install reveal.js</p>
+					</section>
+					<section>
+						<h3>Step 4</h3>
+						<p>import reveal.js to your html file.</p>
+					</section>
+					<section>
+						<h3>Step 5: init.</h3>
+						<pre><code class="html">&ltbody&gt
+    &ltdiv class="reveal"&gt
+        &ltdiv class="slides"&gt
+            &lt!-- Add slides at here. --&gt
+        &lt/div&gt
+    &lt/div&gt
+&lt/body&gt</code></pre>
+					</section>
+				</section>
+				<!-- Start Add Slides -->
+				<section>
+					<h3>Step 6: Add slides.</h3>
+					<pre><code class="html">&ltdiv class="slides"&gt
+    &ltsection&gt
+        &lth1&gtSlides Example&lt/h1&gt
+    &lt/section&gt
+    &ltsection&gt
+        &ltsection&gt
+            &lth2&gtIntroduction&lt/h2&gt
+        &lt/section&gt
+        &ltsection&gt
+            &ltdel&gtSame as title&lt/del&gt
+        &lt/section&gt
+    &lt/section&gt
+&lt/div&gt</code></pre>
+				</section>
+				<!-- Code syntax highlighting -->
+				<section>
+					<h3 style="top: 3rem">Step 7: Code syntax highlighting</h3>
+					<section>
+						<h4>import highlight.js</h4>
+						<pre><code class="html">&lthead&gt
+        &ltlink rel="stylesheet" href="reveal.js/lib/css/zenburn.css"&gt
+    &lt/head&gt
+    &ltbody&gt
+        &ltscript&gt
+            Reveal.initialize({dependencies:[{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }]});
+        &lt/script&gt
+    &lt/body&gt</code></pre>
+					</section>
+					<section>
+						<h4>usage</h4>
+						<pre><code class="html">&ltpre&gt&ltcode class="python"&gtprint('hello')&lt/code&gt&lt/pre&gt</code></pre>
+						<hr>
+						<pre><code class="python">print('hello')</code></pre>
+					</section>
+				</section>
+				<!-- Example -->
+				<section>
+					<h3>Step 8: Finish</h3>
+					<a href="#">Example</a>
+				</section>
+				<section>
+					<h3>Step 9: More Info.</h3>
+					<p>View <a href="https://github.com/hakimel/reveal.js">reveal.js</a> GitHub pages.</p>
+				</section>
+			</div>
+		</div>
+		<script>
+           
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+		</script>
+	</body>
+</html>
