@@ -90,6 +90,6 @@
     ```
 
 8. Finish ?
-    - [Example](example/index.html)
+    - [Example](https://lin71008.github.io/Testing-Area/slides_with_revealjs/example/index.html)
 9. More Info.
     - View [**reveal.js**](https://github.com/hakimel/reveal.js) GitHub pages.
