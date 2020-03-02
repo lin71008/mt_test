@@ -1,95 +1,82 @@
 # Quick slides with reveal.js
-## Introduction
 
-~~Same as title.~~
+## 介紹
 
-## Guide
+使用 `reveal.js` 來快速生成好看的簡報.
 
-1. Create an empty file named 'index.html'.
-2. init.
+## 教學
+
+1. 開一個新資料夾, `FOLDER-NAME`
+
+2. 下載 `reveal.js` 至資料夾中.
+
+3. 按照下面格式搭建一個簡單的 `HTML + reveal.js` 框架.
 
     ```html
-    <!DOCTYPE html>
+    <!DOCTYPE HTML>
     <html lang="en">
         <head>
             <meta charset="utf-8">
-            <title>Slides Example</title>
+            
+            <!-- <title>Edit slides title at here.</title> -->
+
+            <link rel="stylesheet" href="reveal.js/css/reset.css">  
+            <link rel="stylesheet" href="reveal.js/css/reveal.css">
+            <link rel="stylesheet" href="reveal.js/css/theme/black.css">
+            <script src="reveal.js/js/reveal.js"></script>    
+            
+            <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
         </head>
+
         <body>
-            <!-- Something -->
+            <div class="reveal">
+                <div class="slides">
+                    <!-- Add slides at here. -->
+                </div>
+            </div>
+
+            <script src="reveal.js/js/reveal.js"></script>
+            <script>
+            Reveal.initialize({
+                    controls: true,
+                    progress: true,
+                    history: true,
+                    center: true,
+
+                    transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+                    // Optional reveal.js plugins
+                    dependencies: [
+                        { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+                        { src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+                        { src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+                        { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+                        { src: 'reveal.js/plugin/notes/notes.js', async: true }
+                    ]
+                });
+        </script>
         </body>
     </html>
     ```
 
-3. Install `reveal.js`.
-    - you can just clone `reveal.js` on GitHub and unzip at locate folder.
-4. import `reveal.js` to your html file.
+4. 添加簡報標題, 內容, ... 
 
-    ```html
-    <head>
-        <link rel="stylesheet" href="reveal.js/css/reset.css">  
-        <link rel="stylesheet" href="reveal.js/css/reveal.css">
-        <link rel="stylesheet" href="reveal.js/css/theme/black.css">
-        <script src="reveal.js/js/reveal.js"></script>    
-    </head>
-    <body>
-        <script>
-                Reveal.initialize();
-        </script>
-    </body>
-    ```
+    * 如同一般 `HTML` 的寫法.
 
-5. init.
+    * 提供兩層簡報結構, 以 `<section>` 來進行分段.
 
-    ```html
-    <body>
-        <div class="reveal">
-            <div class="slides">
-                <!-- Add slides at here. -->
-            </div>
-        </div>
-    </body>
-    ```
+    * 提供段落功能, 以 `class="fragment`來進行段落
 
-6. Add slides.
+    * 提供程式碼風格區塊, 預設以 `<pre><code class="lang">` 來進行標示.
 
-    ```html
-    <div class="slides">
-        <section>
-            <h1>Slides Example</h1>
-        </section>
-        <section>
-            <section>
-                <h2>Introduction</h2>
-            </section>
-            <section>
-                <del>Same as title</del>
-            </section>
-        </section>
-    </div>
-    ```
+    * 支持 `Markdown` 風格, 使用 `<section data-markdown>` 後, 於 `<script type="text/template">` 中進行編寫.
 
-7. Code syntax highlighting
-    - import `highlight.js`
+5. 挑一個喜歡的簡報風格, 轉場特效, ...
 
-    ```html
-    <head>
-        <link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
-    </head>
-    <body>
-        <script>
-            Reveal.initialize({dependencies:[{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } }]});
-        </script>
-    </body>
-    ```
-    
-    - usage
+6. 完成拉.
 
-    ```html
-    <pre><code class="python">print('hello')</code></pre>
-    ```
+## 參考資料
 
-8. Finish ?
-    - [Example](https://github.com/lin71008/Testing-Area/blob/master/slides_with_revealjs/example/index.html)
-9. More Info.
-    - View [**reveal.js**](https://github.com/hakimel/reveal.js) GitHub pages.
+* [reveal.js](https://github.com/hakimel/reveal.js) 
+* [Example](https://github.com/lin71008/Testing-Area/tree/master/slides_with_revealjs)

@@ -22,6 +22,7 @@
 
 * [Data Struct](#): 資料結構課程筆記 \OAO
 
+* [1280.py](https://github.com/lin71008/Testing-Area/tree/master/1280.py): 計算月票 & 新捷運計費制間的哪個划算
 ## TODO
 
 - [ ] 資料結構課程筆記

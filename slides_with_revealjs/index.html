@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<title>Quick slides with reveal.js</title>
+		
+		<!-- mobile & initial-scale -->
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- loading reveal.js -->
+		<link rel="stylesheet" href="reveal.js/css/reset.css">  
+		<link rel="stylesheet" href="reveal.js/css/reveal.css">
+		<link rel="stylesheet" href="reveal.js/css/theme/black.css" id="theme">
+		<script src="reveal.js/js/reveal.js"></script>
+		
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="reveal.js/lib/css/zenburn.css">
+		
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+				<section>
+					<h2>Quick slides with reveal.js</h2>
+					<p>Author: Nick Lin</p>
+				</section>
+
+				<section>
+					<h2>介紹</h2>
+					<h4 class="fragment">使用 reveal.js 來快速生成好看的簡報.</h4>
+				</section>
+
+				<section>
+					<section>
+						<h2>教學</h2>
+					</section>
+					<!-- Step 1, 2-->
+					<section>
+						<h4>1. 開一個新資料夾.</h4>
+						<h4>2. 下載 reveal.js 至資料夾中.</h4>
+					</section>
+				</section>
+				<!-- Step 3 -->
+				<section data-markdown>
+					<script type="text/template">
+						###### 3. 一個簡單的 `HTML + reveal.js` 框架.
+						```HTML
+						<!DOCTYPE HTML>
+						<html>...</html>
+						<!-- 略過, 參考README.md -->
+						```
+					</script>
+				</section>
+				<!-- Step 4 -->
+				<section>
+					<h4>4. 添加簡報標題, 內容, ... </h4>
+					<br>
+					<ul style="font-size: 20px">
+						<li>如同 HTML 的寫法.</li>
+						<li>提供兩層簡報結構, 以 &ltsection> 來進行分段.</li>
+						<li>提供段落功能, 以 &ltclass="fragment來進行段落.</li>
+						<li>提供程式碼風格區塊, 預設以 &ltpre>&ltcode class="html"> 來進行標示.</li>
+						<li>支持 Markdown 風格, 使用 &ltsection data-markdown> 後, 於 &ltscript type="text/template"> 中進行編寫.</li>
+					</ul>
+				</section>
+				<!-- Step 5 -->
+				<section>
+					<h4>5. 挑一個喜歡的簡報風格, 轉場特效, ...</h4>
+					<pre><code class="html">
+@ Reveal.initialize...
+transition: 'slide'
+// none/fade/slide/convex/concave/zoom
+
+&ltlink rel="stylesheet" href="black.css" id="theme">
+// black.css, simple.css, sky.css, ...
+					</code></pre>
+				</section>
+				<section>
+					<h4>6. 完成拉.</h4>
+					<p class="fragment" style="color: #888888"><del>懶就直接都用 data-markdown</del></p>
+				</section>
+				<section>
+					<h2>參考資料</h2>
+					<h1><a href="https://github.com/hakimel/reveal.js">reveal.js</a></h1>
+				</section>
+			</div>
+		</div>
+		<p style="font-size: 26px">* <script src="reveal.js/js/reveal.js">reveal.js</script></p>
+		<script>
+		Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'reveal.js/plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'reveal.js/plugin/zoom-js/zoom.js', async: true },
+					{ src: 'reveal.js/plugin/notes/notes.js', async: true }
+				]
+			});
+	</script>
+	</body>
+</html>
+ 
+
+
+
+
+
+
+
+
+
+
+
